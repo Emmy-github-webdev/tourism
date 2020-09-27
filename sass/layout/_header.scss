@@ -1,0 +1,41 @@
+
+/* Styling the header*/
+.header{
+    height: 95vh; /* Set the size of the box to 95 of the original VeiwPort*/
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-primary-light, 0.8), /* 0.8 is the opacity that makes the image to appear below the linear gradient color*/
+        rgba($color-primary-dark, 0.8)), 
+        url("../img/cover.jpg");
+    background-size: cover; /* The image covers the size of the viewport set to 95vh*/
+    position: relative;
+    background-position: top; /* make the backgroud image top stays tesame irrespective of Viewport position or size*/
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    
+&__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+
+}
+
+&__logo {
+    height: 3.5rem;
+}
+
+&__logo:hover{
+    animation: moveInRight 1s ease-out; /* apply animation to logo when hover over*/
+}
+
+&__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+}
